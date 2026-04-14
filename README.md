@@ -24,7 +24,7 @@ A professional and responsive To-Do List application built using  HTML, CSS, and
 
 ## 🌐 Live Demo
 
- https://AvinashManiTiwari.github.io/To-Do-List/
+  https://avinashmanitiwari.github.io/To-Do-List/
 
 ---
 
