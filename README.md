@@ -1,4 +1,4 @@
-# 📝 To-Do List Web App
+# 📝 To-Do List
 
 A professional and responsive To-Do List application built using  HTML, CSS, and JavaScript. This project demonstrates core web development concepts like DOM manipulation, event handling, and browser storage.
 
