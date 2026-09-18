@@ -1,63 +1,68 @@
-# 📝 To-Do List
+# DailyTask — To-Do / Daily Task Website
 
-A professional and responsive To-Do List application built using  HTML, CSS, and JavaScript. This project demonstrates core web development concepts like DOM manipulation, event handling, and browser storage.
+A complete frontend-only task manager made with **HTML, CSS and vanilla JavaScript**.
 
----
+## Features
+- Calendar with month navigation
+- Date-wise tasks
+- Add / Edit / Delete tasks
+- Mark task Complete / Pending
+- Task title, date, time, priority, category and notes
+- Search tasks
+- Filter: All / Pending / Completed / High priority
+- Sort by time / priority / recently added
+- Daily progress percentage
+- Total / Completed / Pending / Today's task counters
+- Upcoming pending tasks
+- Today button
+- Dark mode
+- Export tasks as JSON backup
+- Import tasks from JSON backup
+- Responsive mobile layout
+- Data stored in browser localStorage
+- No backend, database, npm package or API required
 
-## 🚀 Features
+## Run locally
+Open `index.html` with VS Code Live Server.
 
-* ✅ Add new tasks
-* ✏️ Edit existing tasks
-* 🗑️ Delete tasks
-* ✔️ Mark tasks as completed (with strike-through)
-* 💾 Persistent data using localStorage
-* 📊 Task statistics (Total & Completed)
-* 📱 Fully responsive design
+Example:
+`http://127.0.0.1:5500/index.html`
 
----
+## Data storage
+Tasks are saved in the browser's `localStorage`.
+Therefore:
+- Refreshing the page does not remove tasks.
+- Closing and reopening the browser normally keeps tasks.
+- Different browser/device has separate localStorage.
+- Clearing browser site data can remove tasks.
+- No MongoDB/MySQL/database is used.
 
-## 🛠️ Tech Stack
+## GitHub
+Upload:
+- index.html
+- style.css
+- script.js
+- README.md
 
-* HTML5
-* CSS3 (Flexbox + Responsive Design)
-* JavaScript (ES6)
+No `node_modules` or `.env` is required.
 
-## 🌐 Live Demo
+GitHub Pages can host this project because it is a static website.
 
-  https://avinashmanitiwari.github.io/To-Do-List/
+## APK
+After publishing the static website, it can be wrapped into an Android APK using a web-to-app/PWA wrapper or Capacitor. Because this app is frontend-only, no server backend is required.
 
----
+## Important localStorage note
+The APK/browser keeps its own localStorage. If the user uninstalls the app or clears its app data, locally saved tasks may be removed. Use Export Data to create a backup.
 
-## 📂 Project Structure
 
-```
-todo-app/
- ├── index.html
- ├── style.css
- └── script.js
-```
+## Alarm / Reminder
+Each task can have a time and an **Enable alarm/reminder** option.
 
----
+### Web version
+- The page checks scheduled tasks every 15 seconds.
+- When a due task is reached, it can play an alarm sound and show a browser notification if notification permission is granted.
+- Click **Test alarm** once to allow the browser to start audio and verify the sound.
+- A web page cannot guarantee a real Android alarm after the browser/app is fully closed.
 
-## 🧠 What I Learned
-
-* DOM Manipulation using JavaScript
-* Handling user input and events
-* Using localStorage for data persistence
-* Writing clean and structured code
-* Building responsive UI
-
----
-
-## 📌 Future Improvements
-
-* Dark mode
-* Task filtering (Completed / Pending)
-* Drag & Drop functionality
-* Due date and priority
-
----
-
-## 📄 License
-
-This project is free to use and open for learning purposes.
+### For the final Android APK
+For a reliable alarm that can fire even when the app is closed or the phone screen is off, wrap this frontend with **Capacitor** and add the native Android local-notifications/alarm capability. Keep this HTML/CSS/JS frontend; the native layer handles scheduled notifications.
